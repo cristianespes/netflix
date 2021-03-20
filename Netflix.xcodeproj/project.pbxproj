@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1920093A26063AF500EFCE76 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1920093926063AF500EFCE76 /* Kingfisher */; };
+		1920093E26063AFA00EFCE76 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1920093D26063AFA00EFCE76 /* Kingfisher */; };
+		1920094226063C8800EFCE76 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920094126063C8700EFCE76 /* WhiteButton.swift */; };
+		1920094326063C8800EFCE76 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920094126063C8700EFCE76 /* WhiteButton.swift */; };
+		19919D32260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */; };
+		19919D33260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */; };
 		199EB2E22605FE76001762BD /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2CF2605FE76001762BD /* NetflixApp.swift */; };
 		199EB2E32605FE76001762BD /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2CF2605FE76001762BD /* NetflixApp.swift */; };
 		199EB2E42605FE76001762BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2D02605FE76001762BD /* ContentView.swift */; };
@@ -15,19 +21,21 @@
 		199EB2E72605FE76001762BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199EB2D12605FE76001762BD /* Assets.xcassets */; };
 		199EB2F5260600BF001762BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2F4260600BF001762BD /* HomeView.swift */; };
 		199EB2F6260600BF001762BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2F4260600BF001762BD /* HomeView.swift */; };
-		199EB30826060373001762BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 199EB30726060373001762BD /* Kingfisher */; };
-		199EB30C2606037C001762BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 199EB30B2606037C001762BD /* Kingfisher */; };
 		199EB31026060479001762BD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB30F26060479001762BD /* Movie.swift */; };
 		199EB31126060479001762BD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB30F26060479001762BD /* Movie.swift */; };
 		199EB315260604CD001762BD /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB314260604CD001762BD /* StandardHomeMovie.swift */; };
 		199EB316260604CD001762BD /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB314260604CD001762BD /* StandardHomeMovie.swift */; };
 		199EB31A26060546001762BD /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB31926060546001762BD /* GlobalHelpers.swift */; };
 		199EB31B26060546001762BD /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB31926060546001762BD /* GlobalHelpers.swift */; };
+		19EA36102606156C004B4E8E /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA360F2606156C004B4E8E /* TopMoviePreview.swift */; };
+		19EA36112606156C004B4E8E /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA360F2606156C004B4E8E /* TopMoviePreview.swift */; };
 		19F91887260606FB00EE07E4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F91886260606FB00EE07E4 /* HomeViewModel.swift */; };
 		19F91888260606FB00EE07E4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F91886260606FB00EE07E4 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1920094126063C8700EFCE76 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		199EB2CF2605FE76001762BD /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		199EB2D02605FE76001762BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		199EB2D12605FE76001762BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +48,7 @@
 		199EB30F26060479001762BD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		199EB314260604CD001762BD /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
 		199EB31926060546001762BD /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		19EA360F2606156C004B4E8E /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		19F91886260606FB00EE07E4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199EB30826060373001762BD /* Kingfisher in Frameworks */,
+				1920093A26063AF500EFCE76 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199EB30C2606037C001762BD /* Kingfisher in Frameworks */,
+				1920093E26063AFA00EFCE76 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,9 +125,12 @@
 		199EB2F9260600C6001762BD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				19F91886260606FB00EE07E4 /* HomeViewModel.swift */,
 				199EB2F4260600BF001762BD /* HomeView.swift */,
+				19F91886260606FB00EE07E4 /* HomeViewModel.swift */,
 				199EB314260604CD001762BD /* StandardHomeMovie.swift */,
+				19EA360F2606156C004B4E8E /* TopMoviePreview.swift */,
+				1920094126063C8700EFCE76 /* WhiteButton.swift */,
+				19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -147,7 +159,7 @@
 			);
 			name = "Netflix (iOS)";
 			packageProductDependencies = (
-				199EB30726060373001762BD /* Kingfisher */,
+				1920093926063AF500EFCE76 /* Kingfisher */,
 			);
 			productName = "Netflix (iOS)";
 			productReference = 199EB2D62605FE76001762BD /* Netflix.app */;
@@ -167,7 +179,7 @@
 			);
 			name = "Netflix (macOS)";
 			packageProductDependencies = (
-				199EB30B2606037C001762BD /* Kingfisher */,
+				1920093D26063AFA00EFCE76 /* Kingfisher */,
 			);
 			productName = "Netflix (macOS)";
 			productReference = 199EB2DE2605FE76001762BD /* Netflix.app */;
@@ -200,7 +212,7 @@
 			);
 			mainGroup = 199EB2C92605FE76001762BD;
 			packageReferences = (
-				199EB30626060373001762BD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1920093826063AF500EFCE76 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 199EB2D72605FE76001762BD /* Products */;
 			projectDirPath = "";
@@ -241,8 +253,11 @@
 				19F91887260606FB00EE07E4 /* HomeViewModel.swift in Sources */,
 				199EB2E42605FE76001762BD /* ContentView.swift in Sources */,
 				199EB315260604CD001762BD /* StandardHomeMovie.swift in Sources */,
+				19EA36102606156C004B4E8E /* TopMoviePreview.swift in Sources */,
 				199EB31026060479001762BD /* Movie.swift in Sources */,
 				199EB2E22605FE76001762BD /* NetflixApp.swift in Sources */,
+				19919D32260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */,
+				1920094226063C8800EFCE76 /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +270,11 @@
 				19F91888260606FB00EE07E4 /* HomeViewModel.swift in Sources */,
 				199EB2E52605FE76001762BD /* ContentView.swift in Sources */,
 				199EB316260604CD001762BD /* StandardHomeMovie.swift in Sources */,
+				19EA36112606156C004B4E8E /* TopMoviePreview.swift in Sources */,
 				199EB31126060479001762BD /* Movie.swift in Sources */,
 				199EB2E32605FE76001762BD /* NetflixApp.swift in Sources */,
+				19919D33260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */,
+				1920094326063C8800EFCE76 /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +520,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		199EB30626060373001762BD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		1920093826063AF500EFCE76 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -513,14 +531,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		199EB30726060373001762BD /* Kingfisher */ = {
+		1920093926063AF500EFCE76 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 199EB30626060373001762BD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 1920093826063AF500EFCE76 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		199EB30B2606037C001762BD /* Kingfisher */ = {
+		1920093D26063AFA00EFCE76 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 199EB30626060373001762BD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 1920093826063AF500EFCE76 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
