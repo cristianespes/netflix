@@ -11,6 +11,8 @@ struct HomeView: View {
     
     var vm: HomeViewModel = HomeViewModel()
     
+    @State private var movieDetailToShow: Movie? = nil
+    
     private let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -43,12 +45,21 @@ struct HomeView: View {
                                         StandardHomeMovie(movie: movie)
                                             .frame(width: 100, height: 200)
                                             .padding(.horizontal, 20)
+                                            .onTapGesture {
+                                                movieDetailToShow = movie
+                                            }
                                     }
                                 }
                             }
                         }
                     }
                 }
+            }
+            
+            if let movie = movieDetailToShow {
+                MovieDetail(movie: movie, movieDetailToShow: $movieDetailToShow)
+                    .animation(.easeInOut)
+                    .transition(.opacity)
             }
         }
         .foregroundColor(.white)

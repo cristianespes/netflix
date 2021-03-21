@@ -11,6 +11,8 @@ struct MovieDetail: View {
     
     var movie: Movie
     
+    @Binding var movieDetailToShow: Movie?
+    
     @State private var showSeasonPicker: Bool = false
     @State private var selectedSeason: Int = 1
     
@@ -26,7 +28,7 @@ struct MovieDetail: View {
                     Spacer()
                     
                     Button(action: {
-                        // action: close this view
+                        movieDetailToShow = nil
                     }, label: {
                         Image(systemName: "xmark.circle")
                             .font(.system(size: 28))
@@ -83,7 +85,6 @@ struct MovieDetail: View {
                         .padding(.horizontal, 20)
                         
                         CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: movie, showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
-                        
                     }
                     .padding(.horizontal, 10)
                 }
@@ -133,7 +134,7 @@ struct MovieDetail: View {
 #if DEBUG
 struct MovieDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail(movie: exampleMovie1)
+        MovieDetail(movie: exampleMovie1, movieDetailToShow: .constant(exampleMovie1))
     }
 }
 #endif
