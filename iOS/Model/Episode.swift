@@ -12,9 +12,12 @@ struct Episode: Identifiable {
     
     let name: String
     let season: Int
+    let episodeNumber: Int
     let thumbnailImageURLString: String
     let description: String
     let length: Int
+    
+    let videoURL: URL
     
     var thumbnailURL: URL {
         URL(string: thumbnailImageURLString)!

@@ -11,6 +11,9 @@ struct MovieDetail: View {
     
     var movie: Movie
     
+    @State private var showSeasonPicker: Bool = false
+    @State private var selectedSeason: Int = 1
+    
     private let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -79,7 +82,7 @@ struct MovieDetail: View {
                         }
                         .padding(.horizontal, 20)
                         
-                        // CustomTabSwitcher(tabs: [], movie: movie)
+                        CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: movie, showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
                         
                     }
                     .padding(.horizontal, 10)
@@ -88,6 +91,41 @@ struct MovieDetail: View {
                 Spacer()
             }
             .foregroundColor(.white)
+            
+            if showSeasonPicker == true {
+                Group {
+                    Color.black.opacity(0.9)
+                    
+                    VStack(spacing: 40) {
+                        Spacer()
+                        
+                        ForEach(0..<(movie.numberOfSeasons ?? 0)) { season in
+                            Button(action: {
+                                selectedSeason = season + 1
+                                showSeasonPicker = false
+                            }, label: {
+                                Text("Season \(season + 1)")
+                                    .foregroundColor(selectedSeason == season + 1 ? .white : .gray)
+                                    .font(selectedSeason == season + 1 ? .title : .title2)
+                                    .fontWeight(.bold)
+                            })
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showSeasonPicker = false
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 40))
+                                .scaleEffect(x: 1.1)
+                        })
+                        .padding(.bottom, 30)
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+            }
         }
     }
 }
