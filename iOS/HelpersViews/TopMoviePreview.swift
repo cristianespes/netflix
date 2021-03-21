@@ -18,7 +18,7 @@ struct TopMoviePreview: View {
                 .scaledToFill()
                 .clipped()
             
-            VStack(spacing: 16) {
+            VStack {
                 Spacer()
                 
                 HStack {
@@ -62,6 +62,7 @@ struct TopMoviePreview: View {
                     
                     Spacer()
                 }
+                .padding(.vertical, 14)
             }
             .background(
                 LinearGradient.blackOpacityGradient
