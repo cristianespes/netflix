@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct StandardHomeMovie: View {
-    var movie: Movie
+    let movie: Movie
     
     var body: some View {
         KFImage(movie.thumbnailURL)

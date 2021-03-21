@@ -1,5 +1,5 @@
 //
-//  WhiteButton.swift
+//  PlayButton.swift
 //  Netflix
 //
 //  Created by Cristian Espes on 20/3/21.
@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct WhiteButton: View {
+struct PlayButton: View {
     
-    var text: String
-    var imageName: String
+    let text: String
+    let imageName: String
+    var backgroundColor: Color = .white
     
-    var action: () -> Void
+    let action: () -> Void
     
     var body: some View {
         Button(action: action, label: {
@@ -29,8 +30,8 @@ struct WhiteButton: View {
                 Spacer()
             }
             .padding(.vertical, 6)
-            .foregroundColor(.black)
-            .background(Color.white)
+            .foregroundColor(backgroundColor == .white ? .black : .white)
+            .background(backgroundColor)
             .cornerRadius(3)
         })
     }
@@ -43,7 +44,7 @@ struct WhiteButton_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            WhiteButton(text: "Play",
+            PlayButton(text: "Play",
                         imageName: "play.fill",
                         action: { print("Tapped") })
         }

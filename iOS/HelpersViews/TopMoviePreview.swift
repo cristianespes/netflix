@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct TopMoviePreview: View {
-    var movie: Movie
+    let movie: Movie
     
     var body: some View {
         ZStack {
@@ -47,7 +47,7 @@ struct TopMoviePreview: View {
                     
                     Spacer()
                     
-                    WhiteButton(text: "Play", // TODO: Localizable
+                    PlayButton(text: "Play", // TODO: Localizable
                                 imageName: "play.fill",
                                 action: {  })
                         .frame(width: 120)

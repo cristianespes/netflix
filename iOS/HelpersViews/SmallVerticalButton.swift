@@ -9,14 +9,14 @@ import SwiftUI
 
 struct SmallVerticalButton: View {
     
-    var text: String
+    let text: String
     
-    var isOnImage: String
-    var isOffImage: String
+    let isOnImage: String
+    let isOffImage: String
     
     var isOn: Bool
     
-    var action: () -> Void
+    let action: () -> Void
     
     private var imageName: String {
         if isOn {
