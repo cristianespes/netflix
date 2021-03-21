@@ -25,6 +25,8 @@ final class HomeViewModel: ObservableObject {
         movies.keys.sorted(by: { $0.rawValue < $1.rawValue })
     }
     
+    let allGenres: [HomeGenre] = HomeGenre.allCases
+    
     // MARK: - Life Cycle
     init() {
         setupMovies()
@@ -34,8 +36,17 @@ final class HomeViewModel: ObservableObject {
 
 // MARK: - Public methods
 extension HomeViewModel {
-    func getMovie(for category: Category) -> [Movie] {
-        movies[category] ?? []
+    func getMovie(for category: Category, and homeRow: HomeTopRow, and genre: HomeGenre) -> [Movie] {
+        switch homeRow {
+        case .home:
+            return movies[category] ?? []
+        case .movies:
+            return movies[category]?.filter({ $0.movieType == .movie && $0.genre == genre }) ?? []
+        case .tvShows:
+            return movies[category]?.filter({ $0.movieType == .tvShow && $0.genre == genre }) ?? []
+        case .myList:
+            return movies[category] ?? []
+        }
     }
     
     func getCategoryTitle(for category: Category) -> String {
