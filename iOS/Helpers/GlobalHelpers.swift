@@ -8,6 +8,24 @@
 import Foundation
 import SwiftUI
 
+let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+
+let exampleImageURL: URL = URL(string: "https://picsum.photos/300/104")!
+let exampleImageURL2: URL = URL(string: "https://picsum.photos/300/104")!
+let exampleImageURL3: URL = URL(string: "https://picsum.photos/300/104")!
+
+var randomExmpleImageURL: URL {
+    return [exampleImageURL, exampleImageURL2, exampleImageURL3].randomElement() ?? exampleImageURL
+}
+
+let exampleTrailer1 = Trailer(name: "Season 3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: randomExmpleImageURL)
+
+let exampleTrailer2 = Trailer(name: "The Her's Journey", videoURL: exampleVideoURL, thumbnailImageURL: randomExmpleImageURL)
+
+let exampleTrailer3 = Trailer(name: "The Mysterious", videoURL: exampleVideoURL, thumbnailImageURL: randomExmpleImageURL)
+
+let exampleTrailers = [exampleTrailer1, exampleTrailer2, exampleTrailer3]
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "Dark",
@@ -20,6 +38,7 @@ let exampleMovie1 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7],
     episodes: nil,
     promotionHeadline: nil
@@ -37,6 +56,7 @@ let exampleMovie2 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: "Best Rated Show"
@@ -54,6 +74,7 @@ let exampleMovie3 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: nil
@@ -71,6 +92,7 @@ let exampleMovie4 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: "New episodes coming soon"
@@ -88,6 +110,7 @@ let exampleMovie5 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: nil
@@ -105,6 +128,7 @@ let exampleMovie6 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: "Watch Season 6 Now"
@@ -122,6 +146,7 @@ let exampleMovie7 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, Jordis Triebel",
+    trailers: exampleTrailers,
     moreLikeThisMovies: [],
     episodes: nil,
     promotionHeadline: "Watch Season 6 Now"

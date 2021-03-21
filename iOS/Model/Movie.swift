@@ -25,6 +25,8 @@ struct Movie: Identifiable {
     let creators: String
     let cast: String
     
+    let trailers: [Trailer]
+    
     let moreLikeThisMovies: [Movie]
     
     let episodes: [Episode]?
