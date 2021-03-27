@@ -56,6 +56,7 @@ struct SearchBar: View {
                     .frame(height: 36)
                     .cornerRadius(8)
             )
+            .animation(.default)
             
             if isEditing {
                 Button(action: {
@@ -66,6 +67,8 @@ struct SearchBar: View {
                     Text("Cancel") // TODO: Localizable
                         .foregroundColor(.white)
                 })
+                .transition(.move(edge: .trailing))
+                .animation(.default)
             }
         }
     }

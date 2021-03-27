@@ -85,6 +85,7 @@ struct MovieDetail: View {
                         .padding(.horizontal, 20)
                         
                         CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: movie, showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
+                            .animation(.none)
                     }
                     .padding(.horizontal, 10)
                 }
@@ -194,6 +195,7 @@ struct CurrentEpisodeInformation: View {
             HStack {
                 Text(movie.episodeDescriptionDisplay)
                     .font(.subheadline)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 Spacer()
             }

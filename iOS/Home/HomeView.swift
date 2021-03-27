@@ -91,7 +91,7 @@ struct HomeView: View {
             
             if let movie = movieDetailToShow {
                 MovieDetail(movie: movie, movieDetailToShow: $movieDetailToShow)
-                    .animation(.easeInOut)
+                    .animation(.easeIn)
                     .transition(.opacity)
             }
             

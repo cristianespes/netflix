@@ -28,7 +28,7 @@ struct HomeStack: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
-                        ForEach(vm.getMovie(for: category, and: topRowSelection, and: topGenreSelection)) { movie in
+                        ForEach(vm.getMovie(for: category, and: topRowSelection, and: topGenreSelection), id: \.id) { movie in
                             StandardHomeMovie(movie: movie)
                                 .frame(width: 100, height: 200)
                                 .padding(.horizontal, 20)

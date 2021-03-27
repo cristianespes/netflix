@@ -13,7 +13,7 @@ struct Movie: Identifiable {
     let name: String
     let thumbnailURL: URL
     let categories: [String]
-    let genre: HomeGenre = .allGenres
+    var genre: HomeGenre = .allGenres
     
     // Movie Detail View
     let year: Int
