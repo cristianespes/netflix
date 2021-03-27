@@ -19,6 +19,8 @@ struct TrailerList: View {
                 VStack(alignment: .leading, spacing: 8) {
                     VideoPreviewImage(imageURL: trailer.thumbnailImageURL, videoURL: trailer.videoURL)
                         .frame(maxWidth: screen.width)
+                        .frame(maxHeight: 150)
+                        .clipped()
                     
                     Text(trailer.name)
                         .font(.headline)

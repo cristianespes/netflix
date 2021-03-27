@@ -23,6 +23,8 @@ struct PopularMovieView: View {
                     .padding(.leading, 4)
                 
                 Text(movie.name)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white.opacity(0.9))
                 
                 Spacer()
                 
