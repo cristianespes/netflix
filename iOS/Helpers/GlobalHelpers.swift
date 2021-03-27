@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+let exampleVideoURL: URL = URL(string: "https://www.radiantmediaplayer.com/media/nasa-v2/top-17-338p.mp4")!
 
 let exampleImageURL: URL = URL(string: "https://picsum.photos/300/104")!
 let exampleImageURL2: URL = URL(string: "https://picsum.photos/300/104")!

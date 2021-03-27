@@ -23,25 +23,13 @@ struct MovieDetail: View {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        movieDetailToShow = nil
-                    }, label: {
-                        Image(systemName: "xmark.circle")
-                            .font(.system(size: 28))
-                    })
-                    .buttonStyle(PlainButtonStyle())
-                }
-                .padding(.horizontal, 22)
-                
+            ZStack(alignment: .topTrailing) {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 16) {
                         
                         StandardHomeMovie(movie: movie)
                             .frame(width: screen.width / 2.5)
+                            .padding(.top, 20)
                             
                         MovieInfoSubheadline(movie: movie)
                         
@@ -90,7 +78,18 @@ struct MovieDetail: View {
                     .padding(.horizontal, 10)
                 }
                 
-                Spacer()
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        movieDetailToShow = nil
+                    }, label: {
+                        Image(systemName: "xmark.circle")
+                            .font(.system(size: 28))
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                }
+                .padding(.horizontal, 22)
             }
             .foregroundColor(.white)
             
