@@ -47,6 +47,8 @@
 		198C260E26078D7B00B5F771 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C260C26078D7B00B5F771 /* EpisodesView.swift */; };
 		198C26252607A8D400B5F771 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C26242607A8D400B5F771 /* HomeStack.swift */; };
 		198C26262607A8D400B5F771 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C26242607A8D400B5F771 /* HomeStack.swift */; };
+		198F06D326107CDF008489AD /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F06D226107CDF008489AD /* DownloadsView.swift */; };
+		198F06D426107CDF008489AD /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F06D226107CDF008489AD /* DownloadsView.swift */; };
 		19919D32260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */; };
 		19919D33260634B400B9E1E4 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */; };
 		199EB2E22605FE76001762BD /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EB2CF2605FE76001762BD /* NetflixApp.swift */; };
@@ -97,6 +99,7 @@
 		198C2607260787EC00B5F771 /* TrailerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerList.swift; sourceTree = "<group>"; };
 		198C260C26078D7B00B5F771 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
 		198C26242607A8D400B5F771 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
+		198F06D226107CDF008489AD /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
 		19919D31260634B400B9E1E4 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		199EB2CF2605FE76001762BD /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		199EB2D02605FE76001762BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +200,7 @@
 				19886E40260672E900846E7D /* Detail */,
 				19F925972608E9FD0051D4F7 /* Search */,
 				198BE997260F4949008D99D5 /* ComingSoon */,
+				198F06D126107CB5008489AD /* Download */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -211,6 +215,14 @@
 				198BE998260F495C008D99D5 /* TrackableScrollView.swift */,
 			);
 			path = ComingSoon;
+			sourceTree = "<group>";
+		};
+		198F06D126107CB5008489AD /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				198F06D226107CDF008489AD /* DownloadsView.swift */,
+			);
+			path = Download;
 			sourceTree = "<group>";
 		};
 		199EB2C92605FE76001762BD = {
@@ -413,6 +425,7 @@
 				198C26032607858000B5F771 /* VideoPreviewImage.swift in Sources */,
 				198BE98E260F37B5008D99D5 /* ComingSoonRow.swift in Sources */,
 				19F925A02608EB8F0051D4F7 /* ColorExt.swift in Sources */,
+				198F06D326107CDF008489AD /* DownloadsView.swift in Sources */,
 				198BE993260F4705008D99D5 /* ComingSoonViewModel.swift in Sources */,
 				199EB2E42605FE76001762BD /* ContentView.swift in Sources */,
 				199EB315260604CD001762BD /* StandardHomeMovie.swift in Sources */,
@@ -452,6 +465,7 @@
 				198C26042607858000B5F771 /* VideoPreviewImage.swift in Sources */,
 				198BE98F260F37B5008D99D5 /* ComingSoonRow.swift in Sources */,
 				19F925A12608EB8F0051D4F7 /* ColorExt.swift in Sources */,
+				198F06D426107CDF008489AD /* DownloadsView.swift in Sources */,
 				198BE994260F4705008D99D5 /* ComingSoonViewModel.swift in Sources */,
 				199EB2E52605FE76001762BD /* ContentView.swift in Sources */,
 				199EB316260604CD001762BD /* StandardHomeMovie.swift in Sources */,
