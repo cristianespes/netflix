@@ -28,8 +28,9 @@ struct VideoPreviewImage: View {
                     .foregroundColor(.white)
                     .font(.system(size: 40))
             })
-            .sheet(isPresented: $showingVideoPlayer, content: {
+            .fullScreenCover(isPresented: $showingVideoPlayer, content: {
                 SwiftUIVideoView(url: videoURL)
+                    .edgesIgnoringSafeArea(.all)
             })
         }
     }
