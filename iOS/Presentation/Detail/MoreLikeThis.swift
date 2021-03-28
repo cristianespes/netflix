@@ -24,6 +24,7 @@ struct MoreLikeThis: View {
                     // action
                 }, label: {
                     StandardHomeMovie(movie: movies[index])
+                        .frame(height: 175)
                 })
             }
         }

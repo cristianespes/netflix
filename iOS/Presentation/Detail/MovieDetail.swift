@@ -28,7 +28,7 @@ struct MovieDetail: View {
                     VStack(spacing: 16) {
                         
                         StandardHomeMovie(movie: movie)
-                            .frame(width: screen.width / 2.5)
+                            .frame(width: screen.width / 2.5, height: 200)
                             .padding(.top, 20)
                             
                         MovieInfoSubheadline(movie: movie)
@@ -45,7 +45,6 @@ struct MovieDetail: View {
                                    action: {  })
                         
                         CurrentEpisodeInformation(movie: movie)
-                        
                         
                         CastInfo(movie: movie)
                         
@@ -73,7 +72,6 @@ struct MovieDetail: View {
                         .padding(.horizontal, 20)
                         
                         CustomTabSwitcher(tabs: [.episodes, .trailers, .more], movie: movie, showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason)
-                            .animation(.none)
                     }
                     .padding(.horizontal, 10)
                 }
