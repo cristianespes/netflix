@@ -17,9 +17,9 @@ struct DownloadsView: View {
                 HStack {
                     Image(systemName: "info.circle")
                     
-                    Text("Smart Downloads")
+                    Text("Smart Downloads") // TODO: Localizable
                     
-                    Text("ON")
+                    Text("ON") // TODO: Localizable
                         .foregroundColor(.blue)
                     
                     Spacer()
@@ -43,18 +43,18 @@ struct DownloadsView: View {
                 .opacity(0.6)
                 
                 VStack(spacing: 20) {
-                    Text("Never be without Netflix")
+                    Text("Never be without Netflix") // TODO: Localizable
                         .font(.title2)
                         .fontWeight(.bold)
                     
-                    Text("Download shows and movies so you'll never be without something to watch\n-- even when you're offline")
+                    Text("Download shows and movies so you'll never be without something to watch\n-- even when you're offline") // TODO: Localizable
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 50)
                     
                     Button(action: {
                         // Show shows that can be downloaded
                     }, label: {
-                        Text("See Waht You Can Download")
+                        Text("See Waht You Can Download") // TODO: Localizable
                             .foregroundColor(.black)
                             .fontWeight(.bold)
                             .padding()

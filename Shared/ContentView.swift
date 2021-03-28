@@ -69,12 +69,12 @@ struct ContentView: View {
                 }
                 .tag(Tab.downloads)
             
-            Text(Tab.more.title)
+            /*Text(Tab.more.title)
                 .tabItem {
                     Image(systemName: "equal")
                     Text(Tab.more.title)
                 }
-                .tag(Tab.more)
+                .tag(Tab.more)*/
         }
         .accentColor(.white)
     }
