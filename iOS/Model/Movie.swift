@@ -15,6 +15,9 @@ struct Movie: Identifiable {
     let categories: [String]
     var genre: HomeGenre = .allGenres
     
+    let previewImageName: String
+    let previewVideoURL: URL?
+    
     // Movie Detail View
     let year: Int
     let rating: String

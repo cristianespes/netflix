@@ -53,6 +53,8 @@ func generateMovies(_ count: Int) -> [Movie] {
                            thumbnailURL: thumbnail,
                            categories: categories,
                            genre: .allGenres,
+                           previewImageName: "",
+                           previewVideoURL: nil,
                            year: year,
                            rating: "PG-13",
                            numberOfSeasons: numSeasons,

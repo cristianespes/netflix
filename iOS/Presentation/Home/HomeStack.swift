@@ -25,7 +25,7 @@ struct HomeStack: View {
                         .fontWeight(.bold)
                     Spacer()
                 }
-                .padding(.horizontal, 16)
+                .padding(.horizontal, 8)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
@@ -37,7 +37,7 @@ struct HomeStack: View {
                                 }
                         }
                     }
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 8)
                 }
             }
         }
