@@ -25,18 +25,19 @@ struct HomeStack: View {
                         .fontWeight(.bold)
                     Spacer()
                 }
+                .padding(.horizontal, 16)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack {
                         ForEach(vm.getMovie(for: category, and: topRowSelection, and: topGenreSelection), id: \.id) { movie in
                             StandardHomeMovie(movie: movie)
-                                .frame(width: 100, height: 200)
-                                .padding(.horizontal, 20)
+                                .frame(width: 135, height: 200)
                                 .onTapGesture {
                                     movieDetailToShow = movie
                                 }
                         }
                     }
+                    .padding(.horizontal, 16)
                 }
             }
         }
