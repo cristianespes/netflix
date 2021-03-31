@@ -33,6 +33,11 @@ enum Tab: Int, CaseIterable {
 struct ContentView: View {
     
     @State private var tab: Tab = .home
+    @State private var previewStartingIndex: Int = 0
+    @State private var showPreviewFullScreen: Bool = false
+    @State private var previewCurrentPosition: CGFloat = UIScreen.main.bounds.height + 20
+    
+    private let screen = UIScreen.main.bounds
     
     init() {
         UITabBar.appearance().isTranslucent = false
@@ -40,43 +45,67 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text(Tab.home.title)
-                }
-                .tag(Tab.home)
+        ZStack {
+            TabView {
+                HomeView(previewStartingIndex: $previewStartingIndex,
+                         showPreviewFullScreen: $showPreviewFullScreen)
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text(Tab.home.title)
+                    }
+                    .tag(Tab.home)
+                
+                SearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text(Tab.search.title)
+                    }
+                    .tag(Tab.search)
+                
+                ComingSoon()
+                    .tabItem {
+                        Image(systemName: "play.rectangle")
+                        Text(Tab.comingSoon.title)
+                    }
+                    .tag(Tab.comingSoon)
+                
+                DownloadsView()
+                    .tabItem {
+                        Image(systemName: "arrow.down.to.line.alt")
+                        Text(Tab.downloads.title)
+                    }
+                    .tag(Tab.downloads)
+                
+                /*Text(Tab.more.title)
+                    .tabItem {
+                        Image(systemName: "equal")
+                        Text(Tab.more.title)
+                    }
+                    .tag(Tab.more)*/
+            }
+            .accentColor(.white)
             
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text(Tab.search.title)
-                }
-                .tag(Tab.search)
-            
-            ComingSoon()
-                .tabItem {
-                    Image(systemName: "play.rectangle")
-                    Text(Tab.comingSoon.title)
-                }
-                .tag(Tab.comingSoon)
-            
-            DownloadsView()
-                .tabItem {
-                    Image(systemName: "arrow.down.to.line.alt")
-                    Text(Tab.downloads.title)
-                }
-                .tag(Tab.downloads)
-            
-            /*Text(Tab.more.title)
-                .tabItem {
-                    Image(systemName: "equal")
-                    Text(Tab.more.title)
-                }
-                .tag(Tab.more)*/
+            PreviewList(movies: exampleMovies,
+                        currentSelection: $previewStartingIndex,
+                        isVisible: $showPreviewFullScreen)
+                .offset(y: previewCurrentPosition)
+                .isHidden(!showPreviewFullScreen)
+                .animation(.easeIn)
+                .transition(.move(edge: .bottom))
         }
-        .accentColor(.white)
+        .onChange(of: showPreviewFullScreen, perform: { value in
+            if value {
+                // show full screen
+                withAnimation {
+                    previewCurrentPosition = .zero
+                }
+            } else {
+                // hidding
+                withAnimation {
+                    previewCurrentPosition = screen.height + 20
+                }
+            }
+        })
     }
 }
 

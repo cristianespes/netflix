@@ -11,6 +11,9 @@ struct MoviePreviewRoW: View {
     
     let movies: [Movie]
     
+    @Binding var previewStartingIndex: Int
+    @Binding var showPreviewFullScreen: Bool
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Previews") // TODO: Localizable
@@ -25,6 +28,10 @@ struct MoviePreviewRoW: View {
                         let movie = movies[movieIndex]
                         MoviePreviewCell(movie: movie)
                             .frame(width: 120, height: 120)
+                            .onTapGesture {
+                                previewStartingIndex = movieIndex
+                                showPreviewFullScreen = true
+                            }
                     }
                 }
                 .padding(.horizontal, 8)
@@ -41,7 +48,9 @@ struct MoviePreviewRoW_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            MoviePreviewRoW(movies: exampleMovies)
+            MoviePreviewRoW(movies: exampleMovies,
+                            previewStartingIndex: .constant(0),
+                            showPreviewFullScreen: .constant(false))
                 
         }
     }

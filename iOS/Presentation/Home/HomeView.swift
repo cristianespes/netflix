@@ -62,6 +62,9 @@ struct HomeView: View {
     @State private var showTopRowSelection: Bool = false
     @State private var showGenreSelection: Bool = false
     
+    @Binding var previewStartingIndex: Int
+    @Binding var showPreviewFullScreen: Bool
+    
     private let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -82,12 +85,16 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    MoviePreviewRoW(movies: exampleMovies)
+                    MoviePreviewRoW(movies: exampleMovies,
+                                    previewStartingIndex: $previewStartingIndex,
+                                    showPreviewFullScreen: $showPreviewFullScreen)
                     
                     HomeStack(vm: vm,
                               topRowSelection: topRowSelection,
                               topGenreSelection: homeGenre,
-                              movieDetailToShow: $movieDetailToShow)
+                              movieDetailToShow: $movieDetailToShow,
+                              previewStartingIndex: $previewStartingIndex,
+                              showPreviewFullScreen: $showPreviewFullScreen)
                 }
             }
             
@@ -189,7 +196,8 @@ struct HomeView: View {
 #if DEBUG
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(previewStartingIndex: .constant(0),
+                 showPreviewFullScreen: .constant(false))
     }
 }
 #endif
