@@ -25,6 +25,7 @@ struct Movie: Identifiable {
     
     // Personalization
     let currentEpisode: CurrentEpisodeInfo?
+    let accentColor = randomColorForMovie
     let defaultEpisodeInfo: CurrentEpisodeInfo
     let creators: String
     let cast: String

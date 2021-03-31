@@ -227,6 +227,11 @@ let exampleEpisodeInfo1 = CurrentEpisodeInfo(
     episode: 1
 )
 
+var randomColorForMovie: Color {
+    let colors: [Color] = [.yellow, .gray, .pink, .red, .blue, .green, .orange]
+    return colors.randomElement() ?? .white
+}
+
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
         gradient: Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.95)]),

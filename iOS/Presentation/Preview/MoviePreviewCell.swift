@@ -12,8 +12,6 @@ struct MoviePreviewCell: View {
     
     let movie: Movie
     
-    private let colors: [Color] = [.yellow, .gray, .pink, .red, .blue, .green, .orange]
-    
     var body: some View {
         ZStack(alignment: .bottom) {
             KFImage(movie.thumbnailURL)
@@ -23,7 +21,7 @@ struct MoviePreviewCell: View {
                 .overlay(
                     Circle()
                         .stroke(lineWidth: 3)
-                        .foregroundColor(colors.randomElement())
+                        .foregroundColor(movie.accentColor)
             )
             
             Image(movie.previewImageName)
