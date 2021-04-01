@@ -16,6 +16,8 @@ struct PreviewList: View {
     
     @State var currentTranslation: CGFloat = 0
     
+    let externalDragGesture: _EndedGesture<_ChangedGesture<DragGesture>>
+    
     private let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -25,7 +27,8 @@ struct PreviewList: View {
             
             PagerView(pageCount: movies.count,
                       currentIndex: $currentSelection,
-                      translation: $currentTranslation) {
+                      translation: $currentTranslation,
+                      externalDragGesture: externalDragGesture) {
                 ForEach(0..<movies.count) { movieIndex in
                     let movie = movies[movieIndex]
                     
@@ -51,21 +54,23 @@ struct PreviewList: View {
     }
 }
 
-private struct ExamplePreviewList: View {
-    @State private var currentSelection = 0
-    @State private var isVisible = true
-    
-    var body: some View {
-        PreviewList(movies: exampleMovies,
-                    currentSelection: $currentSelection,
-                    isVisible: $isVisible)
-    }
-}
-
-#if DEBUG
-struct PreviewList_Previews: PreviewProvider {
-    static var previews: some View {
-        ExamplePreviewList()
-    }
-}
-#endif
+//private struct ExamplePreviewList: View {
+//    @State private var currentSelection = 0
+//    @State private var isVisible = true
+//    let externalDragGesture: _EndedGesture<_ChangedGesture<DragGesture>>
+//    
+//    var body: some View {
+//        PreviewList(movies: exampleMovies,
+//                    currentSelection: $currentSelection,
+//                    isVisible: $isVisible,
+//                    externalDragGesture: externalDragGesture)
+//    }
+//}
+//
+//#if DEBUG
+//struct PreviewList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExamplePreviewList()
+//    }
+//}
+//#endif
